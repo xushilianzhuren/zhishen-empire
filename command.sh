@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "=== 白幼真远程控制测试 ==="
+echo "主机名: $(hostname)"
+echo "用户: $(whoami)"
+echo "系统: $(uname -a)"
+echo "Python: $(python3 --version)"
+echo "Node: $(node --version 2>/dev/null || echo 无)"
+echo "网络出口IP: $(curl -s ifconfig.me)"
+echo "磁盘: $(df -h / | tail -1)"
+echo "内存: $(free -h | head -2)"
+echo "=== 测试完毕 ==="
