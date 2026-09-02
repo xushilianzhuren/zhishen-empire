@@ -1,11 +1,17 @@
 #!/bin/bash
-echo "=== 白幼真远程控制测试 ==="
-echo "主机名: $(hostname)"
-echo "用户: $(whoami)"
-echo "系统: $(uname -a)"
-echo "Python: $(python3 --version)"
-echo "Node: $(node --version 2>/dev/null || echo 无)"
-echo "网络出口IP: $(curl -s ifconfig.me)"
-echo "磁盘: $(df -h / | tail -1)"
-echo "内存: $(free -h | head -2)"
-echo "=== 测试完毕 ==="
+echo "=== 网络探测 ==="
+for url in "https://openrouter.ai/api/v1/models" "https://api.groq.com/openai/v1/models" "https://api.mistral.ai/v1/models"; do
+  code=$(curl -s -o /dev/null -w "%{http_code}" --connect-timeout 5 -m 8 "$url" 2>/dev/null)
+  echo "$(echo $url | cut -d/ -f3) $code"
+done
+echo "=== OpenRouter免费模型 ==="
+curl -s "https://openrouter.ai/api/v1/models" | python3 -c "
+import json,sys
+d=json.load(sys.stdin)
+free=[m for m in d.get('data',[]) if ':free' in m.get('id','')]
+print(f'free: {len(free)}')
+for m in free:
+    print(m['id'])
+" 2>&1
+echo "=== pip ==="
+pip install openai 2>&1 | tail -1
