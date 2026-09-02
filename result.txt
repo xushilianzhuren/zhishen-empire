@@ -1,26 +1,39 @@
-=== 网络探测 ===
-openrouter.ai 200
-api.groq.com 401
-api.mistral.ai 401
-=== OpenRouter免费模型 ===
-free: 18
-inclusionai/ling-3.0-flash-fin:free
-dots-studio/dots-3-note-preview:free
-liquid/lfm-2.5-2.6b:free
-nvidia/nemotron-3.5-lightning:free
-thinkingmachines/inkling-small:free
-poolside/laguna-s-2.1:free
-thinkingmachines/inkling:free
-poolside/laguna-xs-2.1:free
-cohere/north-mini-code:free
-z-ai/glm-5.2:free
-nvidia/nemotron-3.5-content-safety:free
-nvidia/nemotron-3-ultra-550b-a55b:free
-minimax/minimax-m3:free
-nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
-google/gemma-4-26b-a4b-it:free
-google/gemma-4-31b-it:free
-minimax/minimax-m2.7:free
-nvidia/nemotron-3-super-120b-a12b:free
-=== pip ===
+=== 安装playwright ===
 [notice] To update, run: python3 -m pip install --upgrade pip
+=== 安装完成，启动注册脚本 ===
+Traceback (most recent call last):
+  File "<stdin>", line 5, in <module>
+  File "/home/codespace/.python/current/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 16702, in launch
+    self._sync(
+  File "/home/codespace/.python/current/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/home/codespace/.python/current/lib/python3.12/site-packages/playwright/_impl/_browser_type.py", line 97, in launch
+    await            ^^^^^^^^^^^^^
+  File "/home/codespace/.python/current/lib/python3.12/site-packages/playwright/_impl/_browser_type.py", line 97, in launch
+    await self._channel.send(
+  File "/home/codespace/.python/current/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.python/current/lib/pythplaywright._impl._errors.TargetClosedError: BrowserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /home/codespace/.cacplaywright._impl._errors.TargetClosedError: BrowserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /home/codespace/.cache/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-vLDQOq --remote-debugging-pipe --no-startup-window
+<launched> pid=25472
+[pid=25472][err] /home/codespace/.cache/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-linux64/chrome-headless-shell: error while loading shared libraries: libatk-1.0.so.0: cannot open shared object file: No such file or directory
+Call log:
+  - <launching> /home/codespace/.cache/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-vLDQOq --remote-debugging-pipe --no-startup-window
+  - <launched> pid=25472
+  - [pid=25472][err] /home/codespace/.cache/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-linux64/chrome-headless-shell: error while loading shared libraries: libatk-1.0.so.0: cannot open shared object file: No such file or directory
+  - [pid=25472] <gracefully close start>
+  - [pid=25472] <kill>
+  - [pid=25472] <will force kill>
+  - [pid=25472] exception while trying to kill process: Error: kill ESRCH
+  - [pid=25472] <process did exit: exitCode=127, signal=null>
+  - [pid=25472] starting temporary directories cleanup
+  - [pid=25472] finished temporary directories cleanup
+  - [pid=25472] <gracefully close end>
+
