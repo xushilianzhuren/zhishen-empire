@@ -1,11 +1,26 @@
-=== 白幼真远程控制测试 ===
-主机名: codespaces-782e78
-用户: codespace
-系统: Linux codespaces-782e78 6.8.0-1052-azure #58~22.04.1-Ubuntu SMP Thu Mar 26 05:02:21 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
-Python: Python 3.12.1
-Node: v24.14.0
-网络出口IP: 23.97.62.138
-磁盘: overlay          32G  9.7G   21G  33% /
-内存:                total        used        free      shared  buff/cache   available
-Mem:           7.8Gi       4.8Gi       161Mi        67Mi       3.2Gi       3.0Gi
-=== 测试完毕 ===
+=== 网络探测 ===
+openrouter.ai 200
+api.groq.com 401
+api.mistral.ai 401
+=== OpenRouter免费模型 ===
+free: 18
+inclusionai/ling-3.0-flash-fin:free
+dots-studio/dots-3-note-preview:free
+liquid/lfm-2.5-2.6b:free
+nvidia/nemotron-3.5-lightning:free
+thinkingmachines/inkling-small:free
+poolside/laguna-s-2.1:free
+thinkingmachines/inkling:free
+poolside/laguna-xs-2.1:free
+cohere/north-mini-code:free
+z-ai/glm-5.2:free
+nvidia/nemotron-3.5-content-safety:free
+nvidia/nemotron-3-ultra-550b-a55b:free
+minimax/minimax-m3:free
+nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+google/gemma-4-26b-a4b-it:free
+google/gemma-4-31b-it:free
+minimax/minimax-m2.7:free
+nvidia/nemotron-3-super-120b-a12b:free
+=== pip ===
+[notice] To update, run: python3 -m pip install --upgrade pip
