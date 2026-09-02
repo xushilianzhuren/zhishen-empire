@@ -1,0 +1,11 @@
+=== 白幼真远程控制测试 ===
+主机名: codespaces-782e78
+用户: codespace
+系统: Linux codespaces-782e78 6.8.0-1052-azure #58~22.04.1-Ubuntu SMP Thu Mar 26 05:02:21 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+Python: Python 3.12.1
+Node: v24.14.0
+网络出口IP: 23.97.62.138
+磁盘: overlay          32G  9.7G   21G  33% /
+内存:                total        used        free      shared  buff/cache   available
+Mem:           7.8Gi       4.8Gi       161Mi        67Mi       3.2Gi       3.0Gi
+=== 测试完毕 ===
