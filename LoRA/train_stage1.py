@@ -12,9 +12,9 @@ try:
     from paddleformers.peft import LoRAConfig, LoRAModel
     P("imports OK")
     P("=== STEP2 拉基座(hf-mirror) ===")
-    tok = AutoTokenizer.from_pretrained("PaddlePaddle/ERNIE-4.5-0.3B-PT")
+    tok = AutoTokenizer.from_pretrained("baidu/ERNIE-4.5-0.3B-PT")
     P("tokenizer OK")
-    model = AutoModelForCausalLM.from_pretrained("PaddlePaddle/ERNIE-4.5-0.3B-PT", dtype="bfloat16")
+    model = AutoModelForCausalLM.from_pretrained("baidu/ERNIE-4.5-0.3B-PT", dtype="bfloat16")
     P("model OK")
     P("=== STEP3 LoRA(LoRAModel) ===")
     lc = LoRAConfig(r=8, lora_alpha=16, lora_dropout=0.05, target_modules=["q_proj","v_proj"])
